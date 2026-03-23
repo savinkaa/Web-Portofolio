@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: white;
+    line-height: 1.6;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.4s ease;
+}
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover {
+    color: orange;
+}
+
+/* HOME */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 100vh;
+    padding-top: 120px;
+}
+.home h1 span {
+    color: orange;
+}
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+.btn-yellow {
+    background: orange;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.btn-dark {
+    background: #222;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.home img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about img {
+    width: 250px;
+    border-radius: 10px;
+}
+.about .info ul {
+    margin: 20px 0;
+}
+.about .info ul li {
+    margin: 5px 0;
+}
+
+/* SKILLS */
+.skills h2 {
+    margin-bottom: 30px;
+}
+.skill {
+    margin-bottom: 20px;
+}
+.skill .bar {
+    height: 8px;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.skill .bar span {
+    display: block;
+    height: 100%;
+    background: orange;
+    border-radius: 5px;
+}
+
+/* CONTACT SECTION */
+.contact {
+    padding: 50px 20px;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.contact p {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    background: var(--input-bg, #fff);
+    color: var(--text-color);
+}
+
+.contact-form button {
+    padding: 12px;
+    background: var(--yellow, #ffc107);
+    border: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #e0a800;
+}
+
+.map iframe {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Dark/Light Mode Button */
+#theme-toggle {
+    background: transparent;
+    border: 2px solid orange;
+    color: orange;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+#theme-toggle:hover {
+    background: orange;
+    color: black;
+}
+
+/* Light Mode */
+body.light {
+    background: white;
+    color: black;
+}
+body.light nav {
+    background: white;
+}
+body.light nav ul li a {
+    color: black;
+}
+body.light nav ul li a.active,
+body.light nav ul li a:hover {
+    color: orange;
+}
+body.light .btn-dark {
+    background: #eee;
+    color: black;
+}
+body.light .bar span {
+    background: orange;
+}
+
+/* Fade Up Animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: orange;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    display: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+#backToTop:hover {
+    background: #ff9900;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    background: black;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid orange;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Bisa diganti dropdown menu */
+    }
+    .home, .about {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home img, .about img {
+        max-width: 200px;
+    }
+}
