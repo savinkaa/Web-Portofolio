@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Portfolio - Savinka Krizanantha</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,95 +19,155 @@
     <div class="loader"></div>
 </div>
 
-<!-- HEADER / NAVBAR -->
+<!-- PARTICLES -->
+<div class="particles"></div>
+
+<!-- NAVBAR -->
 <header>
     <nav>
         <div class="logo">US</div>
+
         <ul>
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about1">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <!-- Tombol Toggle Mode -->
+
         <button id="theme-toggle">🌙</button>
     </nav>
 </header>
 
 <!-- HOME -->
 <section id="home" class="home container">
+
     <div class="text fade-up">
-        <p>Hello!</p>
-        <h1>I'm <span>Savinka Krizanantha Julinda Ali</span></h1>
-        <h3>Mahasiswa Aktif Manajemen Informatika</h3>
+        <p>Hello 👋</p>
+
+        <h1>
+            I'm <span>Savinka Krizanantha</span>
+        </h1>
+
+        <h3 class="typing"></h3>
+
         <div class="buttons">
             <a href="#contact" class="btn-yellow">Hire Me</a>
-            <a href="#projects" class="btn-dark">My Works</a>
+            <a href="#skills" class="btn-dark">My Skills</a>
         </div>
     </div>
+
     <div class="image fade-up">
         <img src="images/b.jpeg" alt="Profile">
     </div>
+
 </section>
 
-<!-- ABOUT SAVINKA -->
-<section id="about1" class="about container">
-    <div class="image fade-up">
+<!-- ABOUT -->
+<section id="about1" class="about container fade-up">
+
+    <div class="image">
         <img src="images/a.jpg" alt="Savinka">
     </div>
-    <div class="info fade-up">
-        <h2>About Me - Savinka</h2>
+
+    <div class="info">
+        <h2>About Me</h2>
+
+        <p>
+            Saya adalah mahasiswa aktif program studi D4 Manajemen Informatika
+            yang memiliki minat pada bidang UI/UX Design dan Frontend Development.
+            Saya senang membuat tampilan website modern, interaktif,
+            dan responsive.
+        </p>
+
         <ul>
             <li><strong>Nama:</strong> Savinka Krizanantha J.A</li>
-            <li><strong>Tanggal Lahir:</strong> Juli 07, 2005</li>
             <li><strong>Email:</strong> savinkakrizanantha07@gmail.com</li>
-            <li><strong>Telepon:</strong> +62 857 3224 5471</li>
-            <li><strong>Status:</strong> Mahasiswa</li>
-            <li><strong>Program Studi:</strong> D4 Manajemen Informatika</li>
+            <li><strong>Status:</strong> Mahasiswa Aktif</li>
+            <li><strong>Fokus:</strong> UI/UX & Frontend</li>
         </ul>
     </div>
+
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="skills container">
-    <h2 class="fade-up">Skills</h2>
+<section id="skills" class="skills container fade-up">
+
+    <h2>My Skills</h2>
+
     <div class="skill-list">
-        <div class="skill fade-up"><p>HTML</p><div class="bar"><span style="width:70%"></span></div></div>
-        <div class="skill fade-up"><p>CSS</p><div class="bar"><span style="width:65%"></span></div></div>
-        <div class="skill fade-up"><p>Design UI</p><div class="bar"><span style="width:80%"></span></div></div>
+
+        <div class="skill">
+            <p>HTML</p>
+            <div class="bar">
+                <span style="width:90%"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>CSS</p>
+            <div class="bar">
+                <span style="width:85%"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>JavaScript</p>
+            <div class="bar">
+                <span style="width:70%"></span>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>UI/UX Design</p>
+            <div class="bar">
+                <span style="width:88%"></span>
+            </div>
+        </div>
+
+    </div>
+
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact container">
-    <h2 class="fade-up">Contact Me</h2>
-    <p class="fade-up">Jika kamu ingin menyapa kita, kirim saja pesan melalui form di bawah ini.</p>
+<section id="contact" class="contact container fade-up">
 
-    <div class="contact-wrapper">
-        <!-- Form Kontak -->
-        <form action="https://formspree.io/f/mnqelqrz" method="POST" class="contact-form fade-up">
-            <div class="form-group">
-                <label for="name">Nama</label>
-                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
-            </div>
+    <h2>Contact Me</h2>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="_replyto" placeholder="Masukkan email Anda" required>
-            </div>
+    <p>
+        Jika ingin bekerja sama atau sekadar menyapa,
+        silakan kirim pesan melalui form berikut.
+    </p>
 
-            <div class="form-group">
-                <label for="message">Pesan</label>
-                <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
-            </div>
+    <form action="https://formspree.io/f/mnqelqrz" method="POST" class="contact-form">
 
-            <button type="submit" class="btn-yellow">Kirim Pesan</button>
-        </form>
-    </div>
+        <div class="form-group">
+            <label>Nama</label>
+            <input type="text" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="_replyto" required>
+        </div>
+
+        <div class="form-group">
+            <label>Pesan</label>
+            <textarea name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-yellow">
+            Kirim Pesan
+        </button>
+
+    </form>
+
 </section>
 
-<!-- BACK TO TOP BUTTON -->
+<!-- BACK TO TOP -->
 <button id="backToTop">⬆</button>
 
+<!-- JS -->
 <script src="script.js"></script>
+
 </body>
 </html>
